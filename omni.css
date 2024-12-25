@@ -1,0 +1,824 @@
+/* 1 typography system  */
+
+/* - Font-size 
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+/* - Font-weights 
+
+line-heights 
+default:1
+
+Spacing  system px
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+/*  02 colors 
+/* Primary: #e67e22*/       
+
+                                /*1. For faces pics use uifaces
+                                2.for other pics use Unsplash.com */
+                                /* 3.use colors contrast checker for contrast checking
+                                  4.use tints and shade generator for colors splitting
+                                  5. use open color for colors
+                                  6.for icons use Hero icons
+                                  you can also use ionicons*/
+
+
+
+/* Reusable grid */
+
+.container{
+    /* 940px */
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+  
+
+}
+.grid{
+    display: grid;
+    column-gap: 6.4rem;
+   row-gap: 9.6rem;
+  
+}
+.grid--2-cols{
+grid-template-columns: repeat(2,1fr);
+}
+.grid--3-cols{
+grid-template-columns: repeat(3,1fr);
+}
+.grid--4-cols{
+grid-template-columns: repeat(4,1fr);
+}
+.grid--5-cols{
+    grid-template-columns: repeat(5,1fr);
+    }
+.grid--center-v{
+    align-items: center;
+}
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+html{
+    /* 1rem = 16px*/
+    /* Now we have converted to 10px by font-size:62.5% as shown below  */
+    /* 10px / 16px =0.625 = 62.5% */
+    /* percentage of user browser font-size setting */
+    font-size: 62.5%;
+    overflow-x: hidden;
+    /* scroll-behavior:smooth ; */
+}
+body{
+    font-family:"Rubik" sans-serif;
+    line-height: 1;
+     font-weight:400; 
+    color: #555;
+    /* only works if there is nothing absolutely positioned in relation to body */
+    overflow-x: hidden;
+    
+
+    
+   
+}
+/* Header */
+
+.header1{
+   
+    background-color:#fdf2e9;
+    padding: 2.5rem 4rem;
+}
+.header{
+    
+    justify-content: space-between;
+    display: flex;
+  
+    margin: 0 auto;
+    /* padding-top: 2.5rem; */
+    background-color: #fdf2e9;
+    position: relative;
+}
+.header img{
+width: 18rem;
+}
+.main-nav-list{
+    display: flex;
+    gap: 3.2rem;
+    list-style: none;
+}
+.main-nav-link
+{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: bold; 
+    transition:all 0.3s ;   
+}
+.main-nav-link:hover
+{
+color: #cf711f;
+}
+.main-nav-link.nav-cta
+{
+    padding: 1.2rem 2.4rem;
+    background-color: #e67e22;
+    border-radius: 9px;
+    color: #fff;
+
+}
+.main-nav-link.nav-cta:hover{
+    background-color: #cf711f;
+}
+
+/* HOVER */
+.btn-mobile-nav{
+border: none;
+background: none;
+cursor: pointer;
+display: none;
+}
+.icon-mobile-nav{
+height: 3.6rem;
+width: 3.6rem;
+color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"]{
+    display: none;
+}
+
+/* Hero */
+.hero{
+    max-width: 110rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 6rem;
+    gap: 9.3rem;
+}
+.btn,
+.btn:link,
+.btn:visited
+{
+    display: inline-block;      
+    padding: 1.6rem 3.2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    /* only necessary for .btn */
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+.hero-img{
+  width: 100%;
+    
+}
+
+.btn--full:link,
+.btn--full:visited{
+        background-color: #e67e22;
+}
+.btn--full:hover
+{
+    background-color:#cf711f;
+}
+
+.btn--outline:link,
+.btn--outline:visited{
+background-color: #fff;
+color: #555;
+}
+.btn--outline:hover{
+    background-color: #fdf2e9;
+}
+.btn--form{
+    background-color: #45260a;
+    color: #fdf2e9;
+    align-self: end;
+    padding: 1.2rem;
+}
+.btn--form:hover {
+    background-color: #fff;
+    color: #555;
+}
+.link:link
+{
+    display: inline-block;
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom:1px solid currentColor ;
+    padding-bottom: 5px;
+    transition: all 0.3s;
+}
+.link:hover{
+    color: #cf711f;
+    border-bottom:1px solid transparent ;
+}
+
+
+
+
+.section-hero
+{
+    background-color: #fdf2e9;
+    padding: 9.6rem 0;
+}
+
+img{
+    max-width: 100%;
+    
+}
+.heading-primary,
+.heading-secondary
+.heading-tertiary{
+    font-weight: 700;
+    color: #333;
+    letter-spacing: -0.5px;
+
+}
+
+.heading-primary{
+    font-size: 5.2rem;
+    padding-bottom:2rem;
+    margin-bottom: 3.2rem;
+    
+}
+.heading-secondary{
+font-size: 4.4rem;
+line-height: 1.2;
+margin-bottom: 9.6rem;
+}
+.heading-tertiary{
+font-size: 2.5rem;
+line-height: 1.2;
+margin-bottom: 3.2rem;
+}
+
+.sub-heading{
+display: block;
+font-size: 1.6rem;
+font-weight: 500;
+color:#cf711f;
+text-transform: uppercase;
+margin-bottom: 1.6rem;
+letter-spacing: 0.75px;
+
+}
+.hero-description{
+    font-size: 2.2rem;
+    padding-bottom:2rem ;
+    line-height: 1.5;
+    margin-bottom: 4rem;
+}
+.margin-right-sm{
+    margin-right: 1.6rem;
+}
+.margin-bottom-md{
+    margin-bottom: 4.8rem !important;
+}
+/* Helper class */
+.center-text{
+    text-align: center;
+}
+/* Delivered meals */
+
+.delivered-meals{
+    display: flex;
+    margin-top: 8rem;
+    align-items: center;
+    gap: 1.3rem;
+}
+.delivered-meals img{
+    
+    height: 4.8rem;
+    width:4.8rem;
+    border-radius: 50%;
+    margin-right: -1.9rem;
+    border: 3px solid #fdf2e9;
+}
+.delivered-meals p{
+    margin-left:2rem;
+    font-size: 1.8rem;
+}
+.delivered-meals span{
+    font-weight: 8 00;
+    color: #cf711f;
+    
+}
+/****************************/
+  /* SECTION FEATURED IN */
+/****************************/
+.section-featured{
+    padding: 4.8rem 0 3.2rem 0;
+}
+.heading-featured-in{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    font-weight:500;
+    text-align: center;
+    margin-bottom: 2.4rem;
+    color: #888;
+}
+.logos{
+    display: flex;
+    justify-content: space-around;
+
+}
+.logos img{
+    height:3.2rem;
+    /* By putting the brightness to mzero it will make it fully black */
+    filter:brightness(0%);
+    /* opacity is used to grey the color of the content it can  be image or others etc 
+    u can put the value between 0-1 or 0% to 100%*/
+    opacity:50%;
+    
+}
+
+/****************************/
+  /* HOW IT WORKS */
+/****************************/
+
+.section-how{
+    padding: 9.6rem 0;
+    font-weight: bold;
+}
+.step-number{
+    font-size: 8.6rem;
+    font-weight: 600;
+    color:#ddd ;
+    margin-bottom: 1.2rem;
+}
+.step-img{
+    width: 40%;
+}
+.step-description{
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+.step-img-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.step-img-box::before,
+.step-img-box::after{
+    content: "";
+    display: block;
+    width: 70%;
+    padding-bottom: 70%;
+    background-color: #fdf2e9;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(0%,-50%);
+    border-radius: 50%;
+}
+
+/* 1..the after and before pseudo classes are used to make divs that are empty you can 
+use it in floats now the div has been made through it within css that are not present 
+in html code by padding bottom as shown below it stretches its height it is a trick
+2..The z-index is used to give the specificity to the content more the z-index more
+the specificity  
+*/
+.step-img-box::before{
+    
+    width: 70%;
+    padding-bottom: 70%;
+    background-color: #fdf2e9;
+    z-index: -2;
+    }
+    .step-img-box::after{
+        width: 50%;
+    padding-bottom: 50%;
+    background-color: #fae5d3;
+    z-index: -1;
+    }
+
+    /****************************/
+  /* MEALS WORKS */
+/****************************/
+.section-meals{
+    padding: 9.6rem 0;
+}
+.meal-tag{
+    margin-bottom: 12px;
+    display: flex;
+    gap: 0.4rem;
+
+}
+.meal{
+    box-shadow: 0 2.4rem 4.8rem rgba(0,0,0,0.075);
+    border-radius: 11px;
+    overflow: hidden;
+    /* we used overflow over here because the picture was not get rounded
+    it was up on the rounded corner by using over flow hidden we fixed that */
+transition: all 0.3s;
+}
+.meal:hover{
+transform: translate(0rem,-1.2rem);
+box-shadow: 0 3.2rem 4.8rem rgba(0,0,0,0.06);
+}
+
+.meal-content{
+    padding:3.2rem 4.8rem 4.8rem 4.8rem;
+}
+.tag{
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #333;
+    border-radius: 100px;
+    font-weight: 600;        
+}
+.tag--vegetarian{
+    background-color: #51cf66;
+    
+}
+.tag--vegan{
+    background-color: #94d82d;
+}
+.tag--paleo{
+    background-color: #ffd43b;
+}
+
+.meal-title{
+    font-size: 2rem;
+    color:#333;
+    font-weight: 600;
+    margin-bottom: 2.4rem;
+
+}
+.meal-attributes{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+.meal-attribute{
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+.meal-img{
+    width: 100%;
+}
+.meal-icon{
+    font-size: 2.4rem;
+    color: #e67e22;
+}
+strong{
+    font-weight: 550;
+}
+.all-recipies{
+    text-align: center;
+    font-size: 1.8rem;
+}
+.list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+.list-item{
+    font-size: 1.8rem;
+    display: flex;
+    align-items:center;
+    gap: 1.8rem;
+    line-height: 2rem;
+}
+.list-icon{
+    width: 3rem;
+    height: 3rem;
+    color: #e67e22;
+}
+*:focus {
+/* outline: none; */
+/* outline: 4px dotted #555;
+outline-offset: 8px; */
+box-shadow: inset 0 0 0 0.8rem #e67e22;
+}
+
+/****************************/
+  /* SECTION TESTIMONIALS */
+/****************************/
+
+.section-testimonials{
+   display: grid;
+   grid-template-columns: 55fr 45fr;
+    background-color: #fdf2e9;
+    align-items: center;
+}
+.testimonials-container{
+    padding: 9.6rem;
+}
+
+.testimonials{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:4.8rem;
+    column-gap: 8rem;
+    
+}
+.testimonials img{
+    width: 6.4rem;
+    border-radius: 50%;
+}
+.testimonial-text{
+    font-size: 1.8rem;
+     line-height:2.8rem;
+    margin-bottom: 1.6rem;
+}
+.testimonial-name{
+    font-size: 1.8rem;
+    color:#6f6f6f; 
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    gap: 1.6rem;
+    padding: 1.6rem;
+}
+.gallery-item{
+    overflow: hidden;
+}
+
+.gallery-item img{
+    display: block;
+    /* there is a white space between the images because they are inline by setting
+     it to block that dissapears  */
+     width: 100%;
+     transition: all 0.3s;
+}
+
+.gallery-item img:hover{
+    transform: scale(1.1);
+/* transform scale is used to large the picture according to the value whereas rotate(12deg)
+is used to rotate the content  */
+}
+
+/****************************/
+  /* SECTION PRICING */
+/****************************/
+
+.section-pricing{
+    padding: 9.6rem 0; 
+    
+}
+.pricing-plan{
+    
+    border-radius: 11px;
+    padding: 4.8rem;
+    width: 75%;
+}
+.pricing--starter{
+    border: 1px dashed #e67e22;
+    justify-self: end;
+}
+.pricing--plan--complete{
+    background-color: #fdf2e9;
+    position: relative;
+    overflow: hidden;
+}
+.pricing--plan--complete::after{
+    content: "Best value";
+    position: absolute;
+    top:6%;
+    right: -18%;
+    padding: 0.8rem 8rem;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    background-color: #ffd43b;
+    transform: rotate(45deg);
+
+}
+
+.plain-header{
+    
+    text-align: center;
+    margin-bottom: 4.8rem;
+    
+}
+
+.plain-name{
+    color: #cf711f;
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.75;
+    margin-bottom: 3.2rem;
+}
+.plain-price{
+    font-size: 6.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.6rem;
+}
+.plain-text{
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+color: #6f6f6f;
+
+}
+.plain-price span{
+    font-size: 3rem;
+    font-weight:500 ;
+    margin-right: .8rem;
+}
+
+.plain-sign-up{
+    text-align: center;
+    margin-top: 4.8rem;
+}
+
+/* section pricing 2 */
+
+.plain-details{
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    margin-bottom: 9.6rem;
+}
+.feature-icon{
+
+    color: #e67e22;
+    height: 3.2rem;
+    width: 3.2rem;
+    margin-bottom: 3.2rem;
+    background-color: #fdf2e9;
+    padding: 1.6rem;
+    border-radius: 50%;
+
+}
+.feature-title{
+font-size: 2.4rem;
+color: #333;
+font-weight: 700;
+margin-bottom: 1.6rem;
+}
+.feature-text{
+font-size: 1.8rem;
+line-height: 1.8rem;
+
+}
+
+/* Section cta */
+.section-cta{
+    /* top/right/bottom/left */
+    padding: 4.8rem 0 12.8rem 0;
+
+}
+.cta{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: #e67e22;
+    box-shadow:0 2.4rem 4.8rem rgba(0,0,0,0.075); 
+    /* temp */
+    /* height: 50rem; */
+    border-radius: 11px;
+    background-image: linear-gradient(to right bottom, #fc7f11,#d86a0a);
+    overflow: hidden;
+}
+
+.cta-text-box{
+    padding: 4.4rem;
+color: #45260a;
+}
+.cta-text{
+    font-size: 1.8rem;
+line-height: 1.8rem;
+margin-bottom: 4.8rem;
+}
+.cta .heading-secondary{
+    color: #45260a;
+    margin-bottom: 3.2rem;
+}
+.cta-img-box{
+    background-image:linear-gradient(to right bottom, #fc780542,#ff7a0649) , 
+    url(6/gallery-5.jpg);
+    /* ..before 6 says that first go to the parent folder */
+    /* if you wanna go to folders back then use two times ../../ */
+    background-size:cover;
+    background-position: center;
+
+}
+.cta-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+
+}
+
+.cta-form label{ 
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+.cta-form input,
+.cta-form select{
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-family: inherit; 
+    /* inherit is used to inherit the parents properties by default this situation doesnt inherit 
+    the properties it can be used in other situations if the parent has the color red
+    if you want that its child element should also inherit the parents color then just write
+    color:inherit it will be inherited */
+    border: none;
+    background-color: #fdf2e9;
+    border-radius: 9px;
+    box-shadow: 0 1px 2px rgba(0,0,0.10);
+    color: inherit;
+}
+.cta-form input::placeholder{
+color: #aaa;
+}
+.cta *:focus {
+    outline: none;
+    box-shadow:  0 0 0 0.5rem rgba(253,242,233,0.5);
+    }
+
+    /* SECTION FOOTER */
+    .footer{
+        padding: 12.8rem 0;
+        border-top:1px solid #eee ;
+    }
+    .grid--footer{
+        grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+    }
+
+    .footer-heading{
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-bottom: 4rem;
+    }
+    .contacts{
+        font-style: normal;
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+    }
+    .address{
+        margin-bottom: 2.4rem;
+    }
+    .footer-nav{
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        list-style: none;
+    }
+.footer-link:link,
+.footer-link:visited{
+text-decoration: none;
+font-size: 1.6rem;
+color:#767676;
+transition: all 0.3s;
+    }
+    .footer-link:hover{
+color: #555;
+    }
+.logo-col{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.social-links{
+    list-style: none;
+    display: flex;
+    gap: 2.4rem;
+
+}
+.social-icons{
+    
+    font-size: 2.4rem;
+}
+.footer img{
+    display: block;
+    margin-bottom: 3.2rem;
+}
+.copyright{
+    line-height: 2rem;
+    font-size: 1.4rem;
+    color: #767676;
+   margin-top: auto; 
+   /* in flex or grid if you want to push the content to the end then you have to
+   give margin-top:auto and also making its container display:flex  */
+}
+
+
+
+
